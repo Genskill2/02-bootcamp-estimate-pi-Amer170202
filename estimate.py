@@ -31,4 +31,4 @@ def monte_carlo(x):
 
     return pi
 
-print(monte_carlo(45))
+
