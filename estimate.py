@@ -1,4 +1,5 @@
 import random
+import math
 
 def wallis(x):
     multiplier = 2
@@ -12,8 +13,8 @@ def wallis(x):
 
 
 def monte_carlo(x):
-    circle_inside_points = 0
-    square_inside_points = 0
+    circle_points = 0
+    square_points = 0
     for i in range(x):
         rand_x=random.uniform(-1,1)
         rand_y=random.uniform(-1,1)
@@ -21,11 +22,13 @@ def monte_carlo(x):
 
 
         if(distance<1):
-            circle_inside_points += 1
+            circle_points += 1
 
-        square_inside_points += 1
+        square_points += 1
 
 
-        pi= (4*circle_inside_points)/square_inside_points
+        pi= (4*circle_points)/square_points
 
     return pi
+
+print(monte_carlo(45))
